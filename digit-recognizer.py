@@ -62,3 +62,18 @@ prediction = classifier.predict_classes(X_test)
 dict = {'ImageId': sample[:,0], 'Label': prediction}
 df = pd.DataFrame(dict)
 df.to_csv('submission.csv',index=False)
+
+# Image Display
+import numpy as np
+import matplotlib.pyplot as plt
+
+for i in range(len(X_test)):
+    x = np.reshape(testX[i],[1,28,28,1])
+    classes = classifier.predict_classes(x)
+    img = testX[i].reshape(28,28)
+    plt.imshow(img, cmap='gray')
+    plt.show()
+    print("Predicted Label: ",classes[0])
+    j = input()
+    if(j=="q"):
+        break
