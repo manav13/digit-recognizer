@@ -26,3 +26,8 @@ The test data set, (test.csv), is the same as the training set, except that it d
 ## Prediction
 Here Convolutional Neural Network(CNN) is used as the prediction-model.
 The Prediction accuracy is approximately 99.142%
+
+## Output
+![Digit9](https://github.com/manav13/digit-recognizer/blob/master/digit9.png)
+
+```Predicted Label: 9```
